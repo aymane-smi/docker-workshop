@@ -1,0 +1,9 @@
+FROM postgres:latest
+
+ENV POSTGRES_PASSWORD=aymane
+ENV POSTGRES_DB=myDB
+ENV POSTGRES_USER=aymane
+
+COPY test.txt .
+
+EXPOSE 5432
