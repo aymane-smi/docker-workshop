@@ -127,3 +127,28 @@ docker run -d --name postgres -p 5432:5432 postgres
 and that's it the container is alive!
 
 ## 7 - Container lifecycle
+
+![lifecycle](https://media.licdn.com/dms/image/D4D12AQFCRiHIoz4arw/article-cover_image-shrink_423_752/0/1682912967953?e=1702512000&v=beta&t=XWVGknTGrKDRTZs_AwvjRHG1ztc7zD_ekzOBsq-ZPA4)
+
+the lifecycle of a container can be divided into 3 main parts:
+ - start
+ - pause
+ - restart
+ - delete
+
+ #### 1 - start
+
+ after we run the conatiner for the first time the container is started by default.but sometimes when ew restart or server/personal laptop... the conatiner is stopped and restarted we use ```docker start <container-name>```
+
+  #### 2 - pause
+
+  docker give us the possiblity to pause/unpause our container using
+
+  ```docker pause|unpause <container-name>```
+
+  ##### 3 - restart
+
+  we can also restart our container, in some cases restarting your conatiner is required when one conatiner depends on another and for that to keep everything sync we should restarted. ```docker restart <container-name>``
+  
+  #### 4 - delete
+  you can delete your container by typing ```docker start <conatiner-name>```
