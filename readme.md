@@ -4,7 +4,7 @@
 
 the `Virtualization` and `containerization` are two seperate methods and technologies even if they look the same as shoween in the illustrrations.
 
-![virtualization illustartion_](https://www.researchgate.net/profile/Bashir-Mohammed-2/publication/269636339/figure/fig1/AS:295113902313473@1447372045341/illustration-of-the-concept-of-Virtualization-7.png)
+![virtualization illustartion](https://www.casesup.com/files/infrastructure/Virtualization-diagram.png)
 
 ![containerization illusatrtion](https://media.geeksforgeeks.org/wp-content/uploads/20190915151739/docker_flowchart-1024x640.png)
 
