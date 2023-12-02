@@ -66,7 +66,7 @@ so when we talk about cleaning/removing we should specify wish of those three sh
 
 ## 4 - docker desktop
 
-for a quick overview i ghighly recommnd the following [video](https://www.youtube.com/watch?v=hwoWBdNilVI).
+for a quick overview i highly recommand the following [video](https://www.youtube.com/watch?v=hwoWBdNilVI).
 
 ## 5 - Dockerfile
 
@@ -126,7 +126,7 @@ docker run -d --name postgres -p 5432:5432 postgres
 
 and that's it the container is alive!
 
-## 7 - Container lifecycle
+## 6 - Container lifecycle
 
 ![lifecycle](https://media.licdn.com/dms/image/D4D12AQFCRiHIoz4arw/article-cover_image-shrink_423_752/0/1682912967953?e=1702512000&v=beta&t=XWVGknTGrKDRTZs_AwvjRHG1ztc7zD_ekzOBsq-ZPA4)
 
@@ -138,7 +138,7 @@ the lifecycle of a container can be divided into 3 main parts:
 
  #### 1 - start
 
- after we run the conatiner for the first time the container is started by default.but sometimes when ew restart or server/personal laptop... the conatiner is stopped and restarted we use ```docker start <container-name>```
+ after we run the container for the first time the container is started by default.but sometimes when ew restart or server/personal laptop... the container is stopped and restarted we use ```docker start <container-name>```
 
   #### 2 - pause
 
@@ -152,3 +152,38 @@ the lifecycle of a container can be divided into 3 main parts:
   
   #### 4 - delete
   you can delete your container by typing ```docker start <conatiner-name>```
+
+  ## 7 - Docker compose
+
+  Docker compose is a tool that help us to manage multiple container at once using `YAML` file. by default the the main configuration file that is known by Docker Compose is `docker-compose.[yaml/yaml]`.
+
+  
+  *N.B:the extension of the yaml file can by `.yaml` or `.yml` but is better to use `.yaml`*
+
+  #### 1 - create your first docker compose file
+
+  ```
+  version: 'docker compose file version'
+  //defining the services
+  service:
+   service_name:
+    //giving a name for the container
+    container_name: "container-name"
+    //name of the image in docker hub
+    image: 'conatiner-image'
+    //defining the environment in the container
+    environment:
+        - var: "value"
+        ...
+    ports:
+        - "port_in_your_computer:port_in_the_container"
+    volumes:
+        - from:to
+  ```
+
+  above we introduced the syntax of the docker-compose file and the necessary keys that docker compose require in order to be executed.
+
+  #### 2 - networking & volume for docker compose
+
+
+
