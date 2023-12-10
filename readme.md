@@ -185,5 +185,32 @@ the lifecycle of a container can be divided into 3 main parts:
 
   #### 2 - networking & volume for docker compose
 
+ ##### whatis the purpose of networking?
 
+sometimes we have we had to containers that need a communcation between them (for example). and for that we should provide each container with the address of the other one for example `A` had the the following address `1.2.3.4` in the other hand `B` had as ip address `1.2.3.5`. unfortunally we can provide each container by the reauired address only manually. for that docker givge use the opportunaity to create a container to groupe the containers and use the container_name as the ip address for this scenario.
 
+##### using docker cli:
+
+```
+> docker network create mynetwork
+//attach container to network
+> docker run -d --name=container --network=mynetwork image
+//attach running containe to network
+> docker network connect mynetwork container1
+> docker network connect mynetwork container2
+```
+
+##### using docker-compose:
+
+```
+version : '3'
+services:
+    container1:
+        networks:
+         - mynetwork
+    container2:
+        networks:
+         - mynetwork  
+networks:
+    mynetwork
+```
